@@ -51,9 +51,9 @@ git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origi
 
 # Power Platform Pack Solution task
 
-Source Folder of Solution to Pack: $(Build.SourcesDirectory)\$(SolutionName)
+Source Folder of Solution to Pack: $(Build.SourcesDirectory) \ $(SolutionName)
 
-Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Solution Output File: $(Build.ArtifactStagingDirectory) \ $(SolutionName).zip
 
 # Power Platform Import Solution task 
 
