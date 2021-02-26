@@ -20,9 +20,9 @@ Note: This will use the input parameter that you specify when running (queuing) 
 
 # Power Platform Export Solution Task
 
-Unmanged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Unmanaged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 
-Manged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed.zip
+Managed Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed.zip
 
 # Power Platform Unpack Solution Task
 Solution Input File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
