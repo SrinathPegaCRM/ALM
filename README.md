@@ -18,5 +18,7 @@ Manged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_m
 
 # Power Platform Unpack Solution Task
 Solution Input File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+
 Target Folder to unpack solution: $(Build.SourcesDirectory)\$(SolutionName)
+
 Type of solution: Unmanaged
