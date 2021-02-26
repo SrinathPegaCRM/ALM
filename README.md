@@ -33,7 +33,7 @@ Type of solution: Unmanaged
 
 # Command line Script
 
-echo commit all changes
+echo Commiting all changes
 
 git config user.email "userXXX@wrkdevops.onmicrosoft.com"
 
@@ -43,11 +43,11 @@ git checkout master
 
 git add --all
 
-git commit -m "solution init"
+git commit -m "Automatic solution commit $(CurrentDate)"
 
-echo push code to new repo
+echo Push code to repository
 
-git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin maste
+git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin master
 
 # Power Platform Pack Solution task
 
