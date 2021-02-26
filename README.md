@@ -50,3 +50,10 @@ Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 # Power Platform Import Solution task 
 
 solution input file: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+
+# Power Platform Import Solution Realese task 
+Solution input file: $(System.DefaultWorkingDirectory)/Build/drop/$(SolutionName)_managed.zip
+
+
+
+
