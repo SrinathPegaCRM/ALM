@@ -20,14 +20,14 @@ Solution Name : $(SolutionName)
 Note: This will use the input parameter that you specify when running (queuing) the build pipeline.
 # Power Platform Export Solution Task
 
-Unmanaged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Unmanaged Solution Output File: $(Build.ArtifactStagingDirectory) \ $(SolutionName).zip
 
-Managed Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed.zip
+Managed Solution Output File: $(Build.ArtifactStagingDirectory) \ $(SolutionName)_managed.zip
 
 # Power Platform Unpack Solution Task
-Solution Input File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Solution Input File: $(Build.ArtifactStagingDirectory) \ $(SolutionName).zip
 
-Target Folder to unpack solution: $(Build.SourcesDirectory)\$(SolutionName)
+Target Folder to unpack solution: $(Build.SourcesDirectory) \ $(SolutionName)
 
 Type of solution: Unmanaged
 
@@ -57,10 +57,10 @@ Solution Output File: $(Build.ArtifactStagingDirectory) \ $(SolutionName).zip
 
 # Power Platform Import Solution task 
 
-Solution input file: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Solution input file: $(Build.ArtifactStagingDirectory) \ $(SolutionName).zip
 
 # Power Platform Import Solution Realese task 
-Solution input file: $(System.DefaultWorkingDirectory)/Build/drop/$(SolutionName)_managed.zip
+Solution input file: $(System.DefaultWorkingDirectory) / Build/drop / $(SolutionName)_managed.zip
 
 
 
