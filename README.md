@@ -15,9 +15,9 @@ Write-Host "Set CurrentDate to $date"
 
 # Power Platform Build Tasks:
 
-Solution Name : ##  $(SolutionName)
-Note: This will use the input parameter that you specify when running (queuing) the build pipeline.
+Solution Name : $(SolutionName)
 
+Note: This will use the input parameter that you specify when running (queuing) the build pipeline.
 # Power Platform Export Solution Task
 
 Unmanaged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
