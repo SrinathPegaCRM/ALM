@@ -26,10 +26,18 @@ Type of solution: Unmanaged
 # Command line Script
 
 echo commit all changes
+
 git config user.email "userXXX@wrkdevops.onmicrosoft.com"
+
 git config user.name "Automatic Build"
+
 git checkout master
+
 git add --all
+
 git commit -m "solution init"
+
 echo push code to new repo
+
 git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin maste
+
