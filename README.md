@@ -10,9 +10,13 @@ Install Microsoft Power Platform Build Tools for Azure DevOps from Visual Studio
 Solution Name : $(SolutionName)
 Note: This will use the input parameter that you specify when running (queuing) the build pipeline.
 
-# Export Task:
+# Power Platform Export Solution Task
 
 Unmanged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 
 Manged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed .zip
 
+# Power Platform Unpack Solution Task
+Solution Input File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Target Folder to unpack solution: $(Build.SourcesDirectory)\$(SolutionName)
+Type of solution: Unmanaged
