@@ -14,7 +14,7 @@ Note: This will use the input parameter that you specify when running (queuing) 
 
 Unmanged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 
-Manged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed .zip
+Manged Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName)_managed.zip
 
 # Power Platform Unpack Solution Task
 Solution Input File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
@@ -41,3 +41,12 @@ echo push code to new repo
 
 git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin maste
 
+# Power Platform Pack Solution task
+
+Source Folder of Solution to Pack: $(Build.SourcesDirectory)\$(SolutionName)
+
+Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+
+# Power Platform Import Solution task 
+
+solution input file: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
