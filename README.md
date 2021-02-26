@@ -5,6 +5,14 @@ Open https://dev.azure.com
 
 Install Microsoft Power Platform Build Tools for Azure DevOps from Visual Studio MarketPlace  https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools
 
+# PowerShell Script
+
+$date=$(Get-Date -UFormat ' %A %B %d, %Y ')
+
+Write-Host "##vso[task.setvariable variable=CurrentDate]$date"
+
+Write-Host "Set CurrentDate to $date"
+
 # Power Platform Build Tasks:
 
 Solution Name : $(SolutionName)
@@ -49,7 +57,7 @@ Solution Output File: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 
 # Power Platform Import Solution task 
 
-solution input file: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
+Solution input file: $(Build.ArtifactStagingDirectory)\$(SolutionName).zip
 
 # Power Platform Import Solution Realese task 
 Solution input file: $(System.DefaultWorkingDirectory)/Build/drop/$(SolutionName)_managed.zip
